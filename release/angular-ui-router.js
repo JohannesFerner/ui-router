@@ -1020,7 +1020,7 @@ UrlMatcher.prototype.format = function (values) {
             result += map(encoded, encodeDashes).join("-");
           } else {
             if (param.type.nonURIEncoded){
-              result += ecoded;
+              result += encoded;
             } else {
               result += encodeURIComponent(encoded);
             }
