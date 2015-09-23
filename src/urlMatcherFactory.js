@@ -349,7 +349,11 @@ UrlMatcher.prototype.format = function (values) {
           if (isArray(encoded)) {
             result += map(encoded, encodeDashes).join("-");
           } else {
-            result += encodeURIComponent(encoded);
+            if (param.type.nonURIEncoded){
+              result += ecoded;
+            } else {
+              result += encodeURIComponent(encoded);
+            }
           }
         }
         result += nextSegment;
